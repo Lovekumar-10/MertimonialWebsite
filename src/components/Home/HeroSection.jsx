@@ -26,7 +26,7 @@ const HeroSection = () => {
   if (loading) return <HeroSectionSkeleton />;
 
   return (
-    <section className="relative flex items-center   h-[800px] bg-[var(--bg-main)] overflow-hidden mt-16 " style={{ backgroundColor: 'var(--bg-main)' }}>
+    <section className="relative flex items-center  bg-[var(--bg-main)] overflow-hidden mt-16 " style={{ backgroundColor: 'var(--bg-main)' }}>
       {/* Decorative Background Element */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[var(--bg-soft)] rounded-l-[100px] z-0 opacity-50 hidden lg:block" />
 
