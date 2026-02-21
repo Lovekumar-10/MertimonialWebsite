@@ -130,6 +130,8 @@ import Login from "./pages/General/Login";
 import Register from "./pages/General/Register";
 import Chat from "./pages/private/Chat";
 import Connection from "./pages/private/ConnectionPage";
+import PrivacyPolicy from "./pages/General/Privacy.jsx";
+import TermsAndConditions from "./pages/General/TermsAndConditions";
 
 
 import MatrimonyFilter from "./components/connection/MatrimonyFilter"
@@ -163,6 +165,8 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsAndConditions/>} />
           <Route path="/MatrimonyFilter" element={<MatrimonyFilter />} />
         
 

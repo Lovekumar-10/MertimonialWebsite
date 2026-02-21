@@ -289,6 +289,7 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const FindYourSoulmate = () => {
   const { getAllProfiles, userData } = useAuth();
@@ -296,6 +297,7 @@ const FindYourSoulmate = () => {
   const [loading, setLoading] = useState(true);
   const [displayLimit, setDisplayLimit] = useState(8);
   const navigate = useNavigate();
+  const location = useLocation();
 
   // 1. Full Filter State
   const [filters, setFilters] = useState({
@@ -310,6 +312,20 @@ const FindYourSoulmate = () => {
     featured: false,
     online: false,
   });
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const lookingFor = params.get("lookingFor") || "";
+    const ageRange = params.get("ageRange") || "";
+
+    if (lookingFor || ageRange) {
+      setFilters((prev) => ({
+        ...prev,
+        gender: lookingFor === "A Bride" ? "Female" : "Male", // optional mapping
+        ageRange,
+      }));
+    }
+  }, [location.search]);
 
   // --- Static Dropdown Data ---
   const genderOptions = [
@@ -680,7 +696,7 @@ const FindYourSoulmate = () => {
                 <img
                   src={
                     member.profileImages?.[0] ||
-                    "https://via.placeholder.com/500?text=No+Photo"
+                   "https://imgs.search.brave.com/VneMoX7Cl7XDPD7DguYtmdLDfVBIwtaLV6fbnFx77Jc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzEwLzU0LzA5LzI3/LzM2MF9GXzEwNTQw/OTI3ODBfbGlPYllR/bzEwUG4yeE9vNENt/R1laTWVXaXcwUDdD/VDIuanBn"
                   }
                   alt={member.fullName}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
