@@ -34,7 +34,7 @@
   /* Backgrounds - Warm & Clean */
   --bg-main: #fffdf5;
   --bg-card: #ffffff;
-  --bg-soft: #fff9e6;
+  --bg-soft: #230a86;
 
   /* Text - High Contrast */
   --text-primary: #1a1a1a;
@@ -212,6 +212,3 @@ main {
 
 
 
-.full-screen-mobile {
-  height: calc(var(--vh, 1vh) * 100);
-}

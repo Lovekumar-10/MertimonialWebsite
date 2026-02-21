@@ -121,7 +121,6 @@
 
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
 
 // Pages
 import Home from "./pages/General/Home";
@@ -150,16 +149,7 @@ import ScrollToTop from "./components/ScrollToTop";
 function App() {
 
 
-  // ✅ STEP 1: Dynamic --vh fix
-  useEffect(() => {
-    const setVh = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    };
-    setVh();
-    window.addEventListener('resize', setVh);
-    return () => window.removeEventListener('resize', setVh);
-  }, []);
+  
   return (
     <BrowserRouter>
       <ScrollToTop />
