@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Heart, Sparkles, ShieldCheck, Users } from 'lucide-react';
 
+import HeroSectionSkeleton from "../Skeleton/HeroSectionSkeleton"; // adjust path
+
 const HeroSection = () => {
+  const [loading, setLoading] = useState(true);
+
   // Animation variants for text
   const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -12,6 +16,14 @@ const HeroSection = () => {
       transition: { delay: i * 0.1, duration: 0.8, ease: "easeOut" }
     })
   };
+
+  // Simulate loading (replace with real fetch if needed)
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1000); // 1.5s loading
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <HeroSectionSkeleton />;
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-16" style={{ backgroundColor: 'var(--bg-main)' }}>

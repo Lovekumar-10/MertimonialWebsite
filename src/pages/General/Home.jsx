@@ -2,7 +2,7 @@
 
 import HeroSection from "../../components/Home/HeroSection";
 import SuccessStories from "../../components/Home/SuccessStories";
-import CTASection from "../../components/Home/CTASection";
+import CTASection from "../../components/Home/Banner";
 import FeaturedProfiles from "../../components/Home/FeaturedProfiles";
 
 

@@ -224,7 +224,7 @@ import StatBox from "./StatBox";
 import DetailRow from "./DetailRow";
 import ProfileAboutSection from "./ProfileAboutSection";
 
-// ✅ Import your real AuthContext
+// Import your real AuthContext
 import { useAuth } from "../../../context/AuthContext";
 
 const ProfilePreview = () => {
@@ -360,7 +360,7 @@ const ProfilePreview = () => {
             images={
               profileImages.length > 0
                 ? profileImages
-                : ["https://via.placeholder.com/400?text=No+Photo"]
+                : ["https://imgs.search.brave.com/VneMoX7Cl7XDPD7DguYtmdLDfVBIwtaLV6fbnFx77Jc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzEwLzU0LzA5LzI3/LzM2MF9GXzEwNTQw/OTI3ODBfbGlPYllR/bzEwUG4yeE9vNENt/R1laTWVXaXcwUDdD/VDIuanBn"]
             }
           />
 

@@ -311,7 +311,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="w-10 h-10 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center font-bold border-2 border-[var(--color-base)]"
+                className="w-10 h-10 rounded-full  cursor-pointer bg-[var(--color-primary)] text-white flex items-center justify-center font-bold border-2 border-[var(--color-base)]"
               >
                 {user.displayName ? user.displayName[0].toUpperCase() : user.email[0].toUpperCase()}
               </button>
