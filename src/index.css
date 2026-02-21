@@ -45,6 +45,7 @@
   --error: #ef4444;
   --border: #e2e8f0;
 
+
   /* Radius */
   --radius-lg: 16px;
   --radius-md: 10px;
@@ -204,4 +205,13 @@
 /* in your CSS */
 main {
   padding-top: 50px; /* same as navbar height */
+}
+
+
+
+
+
+
+.full-screen-mobile {
+  height: calc(var(--vh, 1vh) * 100);
 }
